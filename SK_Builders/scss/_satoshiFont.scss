@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi_Medium.woff2') format('woff2'),
+        url('../fonts/satoshi_Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi_Bold.woff2') format('woff2'),
+        url('../fonts/satoshi_Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
