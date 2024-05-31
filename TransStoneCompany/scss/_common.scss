@@ -1,0 +1,75 @@
+@use "sass:math";
+
+@import "_reset";
+@import "_adaptValue";
+
+// Fonts ========================
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,italic,500,500italic,700,700italic&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700&display=swap");
+
+// Colors =======================
+$headerFont: rgb(231, 214, 119);
+$headerFontTransform: gold;
+$headerBG: #000;
+
+// BURGER-CONSTRUCT ==================
+%burger {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: rem(40);
+  height: rem(26);
+  &:before, &:after, & span {
+      content: '';
+      width: 100%;
+      height: rem(2);
+      transition: all 0.3s;
+      // ADD BG-COLOR IN MAIN STYLE.SCSS
+  }
+  &.burger-active {
+      &:before {
+          transform: translateY(rem(-2)) rotate(45deg);
+          transform-origin: left top;
+          transition: all 0.3s;
+      } 
+      &:after {
+          transform: translateY(rem(2)) rotate(-45deg);
+          transform-origin: left bottom;
+          transition: all 0.3s;
+      }
+      & span {
+          width: 0;
+          transition: all 0.3s;
+      } 
+  }
+}
+
+// Забрати з календарного інпут стандартну іконку
+/*
+На нього можна впливати position, а також 
+поміщати в медіазапити
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+*/
+
+.title {
+    font-weight: 700;
+    color: $headerFontTransform;
+
+    // .title_secondary
+    &_secondary {
+        @include adaptiveValue("font-size", 36, 24);
+    }
+     // .title_first
+     &_first {
+        @include adaptiveValue("font-size", 48, 30);
+    }
+}
+.text {
+}
