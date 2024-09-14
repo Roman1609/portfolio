@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>job counter</h1>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <form action="#" enctype="multipart/form-data" name="jobs-counter" class="jobs">
+                    <div class="jobs__column column-jobs">
+                        <div id="0" class="column-jobs__item item-row">
+                            <div class="item-row__block">
+                                <label for="date-field_0">Дата</label>
+                                <input id="date-field_0" type="date" placeholder="Дата">
+                            </div>
+                            <div class="item-row__block">
+                                <label for="roll-field_0">№ рулона</label>
+                                <input id="roll-field_0" type="number" placeholder="рулон">
+                            </div>
+                            <div class="item-row__block">
+                                <label for="item-field_0">Назва виробу</label>
+                                <input id="item-field_0" type="text" placeholder="Виріб">
+                            </div>
+                            <div class="item-row__block">
+                                <label for="itemCount-field_0">Кількість виробів</label>
+                                <input id="itemCount-field_0" name="itemCount" type="number" placeholder="К-сть">
+                            </div>
+                            <div class="item-row__block">
+                                <label for="itemCost-field_0">Вартість виробу</label>
+                                <input id="itemCost-field_0" name="itemCost" type="number" placeholder="Вартість">      
+                            </div>
+                            <div class="item-row__block">
+                                <label for="sum_0">Загальна вартість</label>
+                                <input disabled="true" id="sum_0" name="allCost" type="number" placeholder="Загальна сума">
+                            </div>
+                        </div>
+                        </div>
+                        <button class="jobs__add-row" type="button">+ Додати рядок</button>
+                        <button class="jobs__count" type="button">Порахувати =</button>
+                        <div class="jobs__total total-jobs">
+                            <div class="total-jobs__items-count">Всього виробів: <span></span></div>
+                            <div class="total-jobs__cost-count">Загальною вартістю: <span></span></div>
+                        </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
